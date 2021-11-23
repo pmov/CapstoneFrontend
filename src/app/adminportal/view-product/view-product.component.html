@@ -1,0 +1,39 @@
+<!-- <p>view-product works!</p> -->
+
+<!-- <div class="row">
+    <div class="col-md-12">
+        <table border="1">
+            <tr>
+                <th>Product Preview</th>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Remove Product</th>
+            </tr>
+            <tr *ngFor="let product of productList">
+                <td><img src={{product.purl}} width="150" height="150" />
+                </td>
+                <td >{{product._id}}</td>
+                <td>{{product.pname}}</td>
+                <td>{{product.price}}</td>
+                <td><input type="button" value="Delete" (click)="deleteProduct(product)" /></td>
+
+            </tr>
+        </table>
+    </div>
+</div> -->
+<div *ngFor="let product of productList">
+    <div class="card mb-4 shadow-sm col-md-4">
+        <img class="bd-placeholder-img card-img-top p-2" width="200px" height="200px" [src]="product.purl" />
+      
+        <div class="card-body">
+          <p class="card-text">
+            <strong>{{ product.price | currency:'INR' }}</strong>        
+      
+          </p>
+          <p class="card-text"><strong>{{product._id}}</strong></p>   
+          <p class="card-text"><strong>{{ product.pname }}</strong></p>   
+          <p><input type="button" value="Delete" (click)="deleteProduct(product)" class="btn btn-sm btn-outline-secondary product-btn"/></p>       
+        </div>
+      </div>
+</div>

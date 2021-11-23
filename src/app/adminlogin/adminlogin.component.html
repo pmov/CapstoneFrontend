@@ -1,0 +1,53 @@
+<!-- <p>adminlogin works!</p> -->
+<section class="ftco-section" id="admin">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Admin Login</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap py-5">
+                    <!-- <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/bg.jpg);"></div> -->
+                    <div class="img d-flex align-items-center justify-content-center"><img
+                            src="https://img.icons8.com/ios/100/000000/admin-settings-male.png" /></div>
+                    <h3 class="text-center mb-0">Welcome Admin</h3>
+                    <p class="text-center">Sign in by entering the information below</p>
+                    <p class="text-center">{{msg}}</p>
+                    <form [formGroup]="userRef" (ngSubmit)="login()" class="login-form">
+                        <div class="form-group">
+                            <div class="icon"><span class="fa fa-user"></span></div>
+                            <!-- <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-user-interface-kiranshastry-solid-kiranshastry-1.png"/> -->
+                            <input type="text" formControlName="email" class="form-control" placeholder="Username"
+                                required #adminEmail>
+                        </div>
+                        <div class="form-group">
+                            <div class="icon"><span class="fa fa-lock"></span></div>
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Password" required #adminPassword>
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-100 text-md-right">
+                                <a href="#">Forgot Password</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- <button type="submit" class="btn form-control btn-primary rounded submit px-3">Login</button> -->
+                            <input type="submit" value="Login"
+                                class="btn form-control btn-primary rounded submit px-3" /> <br>
+
+                        </div>
+
+                        <div class="w-100 text-center mt-4 text">
+                            <p class="mb-0">Don't have an account?</p>
+                            <!-- <a routerLink='/adminregister'>Sign Up</a> -->
+                            <input type="button" value="Register" class="btn btn-primary rounded submit px-3"
+                                (click)="register(adminEmail,adminPassword)" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

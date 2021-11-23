@@ -1,0 +1,23 @@
+<!-- <p>update-product works!</p> -->
+
+<div class="card">
+    <div class="card-header">
+        <strong>Update Product</strong>
+    </div>
+    <div class="card-body">
+        <form #productRef="ngForm" (ngSubmit)="updateProduct(productRef)">
+            <div class="form-group">
+                <label>PId</label>
+                <input type="text" name="_id" ngModel class="form-control"/><br />
+                <label>PName</label>
+                <input type="text" name="pname" ngModel class="form-control"/><br />
+                <label>Price</label>
+                <input type="text" name="price" ngModel class="form-control"/><br />
+                <input type="submit" value="Update" class="btn btn-primary btn-block btn-sm"/>
+                <input type="reset" value="Reset" class="btn btn-primary btn-block btn-sm"/>
+            </div>
+        </form>
+        <br>
+        {{msg}}
+    </div>
+</div>

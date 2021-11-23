@@ -1,0 +1,26 @@
+<!-- <p>add-product works!</p> -->
+<div class="card">
+    <div class="card-header">
+        <strong>Add a Product</strong>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+            <div class="form-group">
+                <label>PId</label>
+                <input type="text" formControlName="_id" class="form-control" /><br />
+                <label>PName</label>
+                <input type="text" formControlName="pname" class="form-control" /><br />
+                <label>Price</label>
+                <input type="text" formControlName="price" class="form-control" /><br />
+                <label>Image Link</label>
+                <input type="text" formControlName="purl" class="form-control" /><br />
+                <input type="submit" value="Add" class="btn btn-primary btn-block btn-sm" />
+                <input type="reset" value="Reset" class="btn btn-primary btn-block btn-sm" />
+            </div>
+        </form>
+
+        <br />
+        {{msg}}
+    </div>
+
+</div>

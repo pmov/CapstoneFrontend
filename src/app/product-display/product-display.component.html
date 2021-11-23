@@ -1,0 +1,19 @@
+<div>
+    <!-- <h2>Product Details are :</h2>
+    <h2>Static product details from assets folder</h2>
+    <div *ngFor="let p of products;let i=index">
+        <img src={{p.purl}} width="150" height="150"/>
+        <p>{{i+1}} {{p.pname}} {{p.price}}</p>
+        <input type="button" value="Delete" (click)="deleteInfo(p._id)"/>
+    </div> -->
+
+    <h2>Product Details from DB using Express JS</h2>
+    <div *ngFor="let p of productsDb;let i=index">
+        <img src={{p.purl}} width="150" height="150"/>
+        <p>{{i+1}} {{p.pname}} {{p.price}}</p>
+        <!-- <input type="button" value="Delete" (click)="deleteInfo(p._id)"/> -->
+        <input type="button" value="Add to Cart" (click)="addToCart(p._id)"/>
+        <!-- <input type="button" value="Buy Item" (click)="checkout(p._id)"/> -->
+        <!-- <input type="button" value="Add to Wish List" (click)="addToWishList(p._id)"/> -->
+    </div>
+</div>
